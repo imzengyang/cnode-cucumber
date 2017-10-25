@@ -1,0 +1,25 @@
+{
+  "name": "cnode-cucumber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "20171023": "./node_modules/.bin/cucumber.js -t @20171023"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imzengyang/cnode-cucumber.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imzengyang/cnode-cucumber/issues"
+  },
+  "homepage": "https://github.com/imzengyang/cnode-cucumber#readme",
+  "dependencies": {
+    "chromedriver": "^2.33.2",
+    "cucumber": "^3.0.6",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
