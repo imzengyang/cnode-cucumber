@@ -1,0 +1,89 @@
+[
+  {
+    "description": "    注册功能测试。 \n    负责人： zack\n    时间： 2017-10-22",
+    "keyword": "Feature",
+    "name": "register function Test",
+    "line": 1,
+    "id": "register-function-test",
+    "tags": [],
+    "uri": "features/register.feature",
+    "elements": [
+      {
+        "id": "register-function-test;不同注册场景",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "不同注册场景",
+        "tags": [
+          {
+            "name": "@onlyrun",
+            "line": 34
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/hooks.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1993
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 36,
+            "name": "导航到注册页面",
+            "match": {
+              "location": "features/posttopic.js:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1492
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 37,
+            "name": "用户名输入\"\",密码输入\"123\",重复密码输入\"123\",邮箱输入\"123@123.com\"",
+            "match": {
+              "location": "features/register.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 609
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 38,
+            "name": "点击提交，应该收到\"信息不完整。\"",
+            "match": {
+              "location": "features/register.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 419
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/hooks.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

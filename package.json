@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "20171023": "./node_modules/.bin/cucumber.js -t @20171023"
+    "20171023": "./node_modules/.bin/cucumber.js -t @20171023",
+    "onlyrun": "./node_modules/.bin/cucumber.js -t @onlyrun -f json:./report/report.json && node reporter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "dependencies": {
     "chromedriver": "^2.33.2",
     "cucumber": "^3.0.6",
+    "multiple-cucumber-html-reporter": "^1.1.0",
     "selenium-webdriver": "^3.6.0"
   }
 }

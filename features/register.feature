@@ -11,16 +11,27 @@ Feature: register function Test
 
     @email
     Scenario: email 格式不正确
-        Given 导航到注册页面
+        * 导航到注册页面
         When 注册信息中 email 输入"abc"
         Then 错误提示信息为"邮箱不合法。"
-
+    
     Scenario: email 格式不正确
         Given 导航到注册页面
         When 注册信息中 email 输入"abc"
         Then 错误提示信息为"邮箱不合法。"
 
-    @register
+    
+    Scenario: email 格式不正确
+        Given 导航到注册页面
+        When 注册信息中 email 输入"abcdsdefddds"
+        Then 错误提示信息为"邮箱不合法。"
+
+    Scenario: email 格式不正确
+        Given 导航到注册页面
+        When 注册信息中 email 输入"#$%&*(@ssd.com"
+        Then 错误提示信息为"邮箱不合法。"
+
+    @onlyrun
     Scenario Outline: 不同注册场景
         Given 导航到注册页面
         When 用户名输入"<username>",密码输入"<pass>",重复密码输入"<repass>",邮箱输入"<email>"
@@ -28,7 +39,8 @@ Feature: register function Test
         Examples:
         |username|pass|repass|email|tipmessage|
         |        |123 | 123  |123@123.com|信息不完整。|   
-        |imhello |1234|4321| 123@123.com|两次密码输入不一致。|
+        # |imhello |1234|4321| 123@123.com|两次密码输入不一致。|
+        # |imhello |1234|4321| 123@123.com|两次密码输入不一致。|
 
     
     
